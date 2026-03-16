@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -867,7 +868,7 @@ function renderCompareTable() {
 // 記事リスト（サイドバー）
 function renderArticles() {
   const list = document.getElementById('articleList');
-  list.innerHTML = ARTICLES.slice(0, 4).map(a => `
+  list.innerHTML = ARTICLES.slice(0, 5).map(a => `
     <a class="article-item" href="${a.url}" style="text-decoration:none;">
       <div class="article-item-inner">
         <img class="article-thumb" src="${a.thumb}" alt="${a.title}" loading="lazy">
