@@ -1,0 +1,25 @@
+name: Auto Article Generation
+on:
+  schedule:
+    - cron: '0 23 * * 0,3'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Generate article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node generate-article.js
+      - name: Commit and push
+        run: |
+          git config --global user.name 'AI転職ナビBot'
+          git config --global user.email 'bot@example.com'
+          git add data/articles.json
+          git commit -m "auto: add new article $(date +%Y-%m-%d)" || exit 0
+          git push
