@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crazymenz.github.io/ai-talent-ranking/sitemap.xml
