@@ -159,3 +159,16 @@ async function generateArticle() {
 
   articles.unshift(newArticle);
   if (articles.length > 20) articles.splice(20);
+
+// articles.jsonを更新
+  fs.writeFileSync(ARTICLES_FILE, JSON.stringify(articles, null, 2));
+  console.log(`[${now.toISOString()}] 記事追加完了: ID=${newArticle.id}, タイトル="${title}"`);
+
+  // index.htmlも更新
+  updateIndexHtml(articles);
+}
+
+generateArticle().catch(err => {
+  console.error('エラー:', err);
+  process.exit(1);
+});
