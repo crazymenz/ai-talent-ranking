@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -874,7 +875,7 @@ const DEFAULT_THUMB = "https://images.unsplash.com/photo-1677442135703-1787eea5c
 // 記事URLを生成（id1〜5は個別ページ、それ以降はリンクなし）
 function getArticleUrl(a) {
   if (a.url) return a.url;
-  if (a.id >= 1 && a.id <= 5) return `articles/article${a.id}.html`;
+  if (a.id >= 1 && a.id <= 4) return `articles/article${a.id}.html`;
   return null;
 }
 
