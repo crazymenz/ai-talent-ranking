@@ -78,12 +78,15 @@
     <h2>複数のエージェントを併用するのがおすすめ</h2>
     <p>1社だけに絞るのではなく、AI特化型エージェント1〜2社と総合型エージェント1社を併用するのが最も効果的です。それぞれが持つ求人が異なるため、選択肢が広がります。</p>
 
-    <div class="cta-box" style="background:#EEF2FF;border-color:#4F46E5;">
-      <h3>RareTECH｜無料カウンセリング実施中</h3>
-      <p>編集部が厳選したAI・IT特化型転職エージェントのランキングをご覧ください。</p>
-      <a href="//af.moshimo.com/af/c/click?a_id=5436031&p_id=6650&pc_id=18963&pl_id=85032" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" class="btn-primary">RareTECHに無料相談する →</a><img src="//i.moshimo.com/af/i/impression?a_id=5436031&p_id=6650&pc_id=18963&pl_id=85032" width="1" height="1" style="border:none;display:none;" loading="lazy">
-    </div>
-  </div>
+    <div class="cta-box" id="cta-box"></div>
+<script>
+var CTA_ADS = [
+  {title:"RareTECH｜無料カウンセリング実施中",desc:"未経験からITエンジニア転職を実現。AI・データサイエンスも学べる500ステップのカリキュラム。",btn:"RareTECHに無料相談する →",href:"//af.moshimo.com/af/c/click?a_id=5436031&p_id=6650&pc_id=18963&pl_id=85032",imp:"//i.moshimo.com/af/i/impression?a_id=5436031&p_id=6650&pc_id=18963&pl_id=85032"},
+  {title:"Tamesy｜定着率98.5%の転職エージェント",desc:"AIエンジニア向け求人多数。5人に4人が1ヶ月で内定獲得。初回面談から徹底サポート。",btn:"Tamesyに無料相談する →",href:"//af.moshimo.com/af/c/click?a_id=5435994&p_id=7048&pc_id=20176&pl_id=89504",imp:"//i.moshimo.com/af/i/impression?a_id=5435994&p_id=7048&pc_id=20176&pl_id=89504"}
+];
+var ad = CTA_ADS[Math.floor(Math.random()*CTA_ADS.length)];
+document.getElementById("cta-box").innerHTML = "<h3>"+ad.title+"</h3><p>"+ad.desc+"</p><a href=\""+ad.href+"\" rel=\"nofollow\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"btn-primary\">"+ad.btn+"</a><img src=\""+ad.imp+"\" width=\"1\" height=\"1\" style=\"border:none;display:none;\" loading=\"lazy\">";
+</script></div>
 </div>
 <footer><p>© 2026 AI転職ナビ. All rights reserved.</p></footer>
 </body>
